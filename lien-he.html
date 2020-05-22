@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="./cssjs/w3.css">
+    <link rel="stylesheet" href="./cssjs/style.css">
+    <script src="./cssjs/w3.js"></script>
+</head>
+<body style="width: 90%; margin: auto">
+<header w3-include-html="./header/header.html">
+
+</header>
+<div class="w3-bar menu gray">
+    <a class="w3-bar-item" href="./"> <img class="logo" src="./assets/1.png"  alt="logo"/></a>
+    <a class="w3-bar-item" href="./index.html">TRANG CHỦ</a>
+    <a class="w3-bar-item" href="./gioi-thieu.html">GIỚI THIỆU</a>
+    <a class="w3-bar-item" href="./thuc-don.html">THỰC ĐƠN</a>
+    <a class="w3-bar-item" href="./lien-he.html">LIÊN HỆ</a>
+    <a class="w3-bar-item" href="./gio-hang.html">GIỎ HÀNG</a>
+</div>
+<main style="margin-bottom: 10px">
+    <div class="w3-bar w3-padding w3-light-gray breadcrumbs">
+        <a href="javascript:">Trang chủ</a> <span> ></span>
+        <span>Liên hệ</span>
+    </div>
+    <div>
+        <p style="text-align: center; font-weight: bold">Thời gian mở cửa</p>
+
+
+        <div class="w3-container">
+           <p style="width: 300px; margin: auto">
+               Buổi trưa: 12pm - 2pm <br />
+               Buổi tối: 6pm -10pm<br />
+               Địa chỉ: 65 Hàng Bún ,Quán Thánh, Ba Đình ,Hà Nội-Việt Nam<br />
+               Điện thoại: (028) 3930 3394<br />
+               Email: info@noir.com<br />
+           </p>
+           <div style="width: 500px; margin: auto">
+               <p> <input type="text" class="w3-light-gray w3-border w3-padding" style="width: 100%" placeholder="Họ tên" /></p>
+               <p> <input type="text" class="w3-light-gray w3-border w3-padding"  style="width: 100%" placeholder="Điện thoại" /></p>
+               <p> <input type="text" class="w3-light-gray w3-border w3-padding"  style="width: 100%" placeholder="Email" /></p>
+               <p> <textarea type="text" class="w3-light-gray"  style="width: 100%" cols="5" rows="5" placeholder="Nội dung" ></textarea> </p>
+               <p style="text-align: center">
+                   <button class="w3-button w3-border">Gửi</button>
+               </p>
+
+           </div>
+        </div>
+    </div>
+
+
+</main>
+<footer w3-include-html="./footer/content.html">
+<div style="padding: 0 20px" class="gray">
+    <div class="w3-row footer">
+        <div class="w3-col w3-container" style="width:20%">
+            <p class="title"> Thông tin truy cập </p>
+            <div class="w3-card-2 w3-white w3-container">
+                <p><strong>Hôm qua:</strong> 30</p>
+                <p><strong>Hôm nay:</strong> 30</p>
+                <p><strong>Đang online:</strong> 30</p>
+            </div>
+        </div>
+        <div class="w3-col w3-container" style="width:55%">
+            <p class="title"> NOIR</p>
+            <p> Địa chỉ: Địa chỉ: 65 Hàng Bún ,Quán Thánh,
+                Ba Đình ,Hà Nội-Việt Nam </p>
+            <p>Điện thoại: (028) 3930 3394</p>
+            <p>Email: info@noir.com</p>
+        </div>
+        <div class="w3-col w3-container" style="width:25%">
+            <p class="title">MẠNG XÃ HỘI</p>
+            <div class="w3-bar">
+                <a class="w3-bar-item" href="javascript:" > <img alt="fb" src="./assets/fb.png" />  </a>
+                <a class="w3-bar-item" href="javascript:" > <img alt="twin" src="./assets/twin.png"/>  </a>
+                <a class="w3-bar-item" href="javascript:" > <img alt="g+"  src="./assets/g.png"/>  </a>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div>
+        <p>©2018 Copyright Noir - Design by Berlinproof Vietnam</p>
+    </div>
+</div>
+
+
+</footer>
+<script>
+    w3.includeHTML( () => {
+        setTimeout(() => {
+            document.body.querySelectorAll('.menu a').forEach(v => {
+                const pathName = location.pathname === '/'? 'index.html': location.pathname;
+
+                if( v &&  v.pathname.includes(pathName)) {
+                    v.classList.add("active");
+                } else{
+                    v.classList.remove("active");
+                }
+
+            });
+
+        });
+    });
+</script>
+</body>
+</html>

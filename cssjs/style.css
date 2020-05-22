@@ -1,0 +1,43 @@
+
+.gray {
+    background: #143549;
+    color: whitesmoke;
+}
+.menu {
+    height: 68px;
+
+}
+.menu .logo {
+    height: 100%;
+    padding-bottom: 5px;
+}
+.menu a {
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none!important;
+}
+.footer .title {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+.footer img {
+    width: 40px;
+}
+
+/* main */
+
+main h2.title {
+    border-bottom: 1px solid #6d767f;
+}
+.san-pham a, .san-pham-lien-quan a,.breadcrumbs a, a  {
+    text-decoration: none!important;
+}
+
+.w3-image img {
+    width: 100%!important;
+    padding: 10px;
+}
+.active {
+  color: #F5FFBF;
+}
